@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
 
     @GetMapping("/")
-    public String greeting(Model model) {
-        model.addAttribute("context", "SpringBoot Docker!");
+    public String index(Model model) {
+        model.addAttribute("context", "SpringBoot WAR!");
         return "index";
     }
 
