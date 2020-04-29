@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sample.war</groupId>
-    <artifactId>springboot</artifactId>
+    <groupId>com.sample.springboot.build.war</groupId>
+    <artifactId>springboot-war</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -49,7 +49,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.sample.war.springboot.Application</mainClass>
+                    <mainClass>com.sample.springboot.build.war.Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>

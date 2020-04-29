@@ -1,4 +1,4 @@
-package com.sample.war.springboot;
+package com.sample.springboot.build.war;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
