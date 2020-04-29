@@ -1,7 +1,5 @@
 # SpringBoot WAR
 
-## SpringBoot WAR
-
 [Packaging Executable War Files](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-packaging)
 
 [Create a Deployable War File](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-create-a-deployable-war-file)
