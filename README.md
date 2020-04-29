@@ -39,6 +39,7 @@ public class Application extends SpringBootServletInitializer {
 - `pom.xml`中添加插件`spring-boot-maven-plugin`
 
 ```xml
+<finalName>[APP_NAME]</finalName>
 <plugin>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -58,38 +59,19 @@ public class Application extends SpringBootServletInitializer {
 </dependency>
 ```
 
-- 编译运行
+- 编译`war`
 
 ```shell script
-mvn package
-cp target/springboot-tomcat-docker-0.0.1-SNAPSHOT.jar tomcat-docker/webapps
+mvn clean package
+```
+
+- 运行
+
+```shell script
+cp target/[APP_NAME].jar tomcat-docker/webapps
 sudo docker restart tomcat
 ```
 
-## SpringBoot WAR Docker
+- 访问
 
-### Docker
-
-- [Get Docker Engine - Community for Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
-
-```shell script
-sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-sudo docker run hello-world
-```
-  
-- [Install Docker Compose](https://docs.docker.com/compose/install/)
-
-```shell script
-sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-### SpringBoot WAR Docker
-
-[Spring Boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
+http://localhost:8080/[APP_NAME]
